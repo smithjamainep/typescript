@@ -1,78 +1,43 @@
 // URL for the instructions: 
 // https://education.launchcode.org/intro-to-professional-web-dev/chapters/typescript/exercises.html 
-
-
 // Part 1: Declare (5) Variables With Type
-
-let spacecraftName: string = 'Determination'
-let speedMph: number = 17500;
-let kilometersToMars : number = 225000000;
-let kilometerToTheMoon: number = 384400;
-let milesperKilometer: number = 0.621;
-
+var spacecraftName = 'Determination';
+var speedMph = 17500;
+var kilometersToMars = 225000000;
+var kilometerToTheMoon = 384400;
+var milesperKilometer = 0.621;
 // Part 2: Print Days to Mars
-const milesToMars: number = kilometersToMars * milesperKilometer
-const hoursToMars: number = milesToMars / speedMph
-const daysToMars: number = hoursToMars / 24
-
-
+var milesToMars = kilometersToMars * milesperKilometer;
+var hoursToMars = milesToMars / speedMph;
+var daysToMars = hoursToMars / 24;
 // Code an output statement here (use a template literal):
-
 // console.log(`${spacecraftName} would take ${daysToMars} days to get to Mars.`)
-
 // Part 3: Create a Function ("getDaysToLocation")
-function getDaysToLocation (kilometersAway:number): number {
-    let milesAway: number = kilometersAway * milesperKilometer
-    let hoursToLocation: number = milesAway / speedMph
-    return hoursToLocation / 24 
+function getDaysToLocation(kilometersAway) {
+    var milesAway = kilometersAway * milesperKilometer;
+    var hoursToLocation = milesAway / speedMph;
+    return hoursToLocation / 24;
 }
-
-
 // Move your output statement from part 2 here. Update the template literal to call
 // the function and print the outputs for a Mars trip and a moon trip.
-
-console.log(`${spacecraftName} would take ${getDaysToLocation(kilometersToMars)} days to get to Mars.`)
-console.log(`${spacecraftName} would take ${getDaysToLocation(kilometerToTheMoon)} days to get to Mars.`)
-
-
-
-
+console.log("".concat(spacecraftName, " would take ").concat(getDaysToLocation(kilometersToMars), " days to get to Mars."));
+console.log("".concat(spacecraftName, " would take ").concat(getDaysToLocation(kilometerToTheMoon), " days to get to Mars."));
 // Part 4: Create a Spacecraft Class
-
-class Spacecraft {
-    milesPerKilometer: number = 0.621;
-
-    name: string;
-    speedMph: number;
-
-    constructor(name: string, speedMph: number) {
-    this.name = name;
-    this.speedMPH = speedMph;
-}
- 
-
+// class Spacecraft {
+//     milesPerKilometer: number = 0.621;
+//     name: string;
+//     speedMph: number;
+//     Constructor 
+//     this.name = name;
+//     this.speedMPH = speedMph;
+// }
 // Create an instance of the class here:
-
-
-
 // Move your output statements from part 3 here. Update the template literals use the
 // instance of the class.
-
-
-
 // Part 5: Export and Import the SpaceLocation Class
 // Add the required import statement BEFORE the part 1 concent.
-
-
 // Add the printDaysToLocation function to the Spacecraft class.
-
 // Paste in the code from step 6 here:
-
-
-
-
-
-
 // const milesToMars: number = kilometerstoMars * milesperKilometer
 // const hourstoMars: number = milesToMars / speedMph
 // const daystoMars: number = hourstoMars / 24
